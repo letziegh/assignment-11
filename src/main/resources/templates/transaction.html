@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Transaction Details</title>
+  <link rel="stylesheet" href="/css/transactions.css"/>
+</head>
+<body>
+<h2>Transaction Details</h2>
+
+<table>
+  <thead>
+  <tr>
+    <th>Field</th>
+    <th>Value</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>ID</td>
+    <td th:text="${transaction.id}">ID</td>
+  </tr>
+  <tr>
+    <td>Date</td>
+    <td th:text="${transaction.date}">Date</td>
+  </tr>
+  <tr>
+    <td>Retailer</td>
+    <td th:text="${transaction.retailer}">Retailer</td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td th:text="${transaction.description}">Description</td>
+  </tr>
+  <tr>
+    <td>Amount</td>
+    <td th:text="${transaction.amount}">Amount</td>
+  </tr>
+  <tr>
+    <td>Type</td>
+    <td th:text="${transaction.type}">Type</td>
+  </tr>
+  </tbody>
+</table>
+
+<a href="/transactions">Back to Transactions</a>
+</body>
+</html>
