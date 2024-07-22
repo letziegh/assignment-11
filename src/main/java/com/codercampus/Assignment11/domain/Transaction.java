@@ -13,7 +13,10 @@ public class Transaction implements Serializable {
 	private LocalDateTime date;
 	private BigDecimal amount;
 	private String type;
-	
+
+
+
+
 	public Long getId() {
 		return id;
 	}
@@ -49,6 +52,14 @@ public class Transaction implements Serializable {
 	}
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	public String getFormattedType() {
+		return type.equals("D") ? "Debit" : "Credit";
+	}
+
+	public BigDecimal getFormattedAmount() {
+		return type.equals("C") ? amount.negate() : amount;
 	}
 	@Override
 	public String toString() {

@@ -33,11 +33,11 @@
   </tr>
   <tr>
     <td>Amount</td>
-    <td th:text="${transaction.amount}">Amount</td>
+    <td th:text="${transaction.getFormattedAmount()}">Amount</td>
   </tr>
   <tr>
     <td>Type</td>
-    <td th:text="${transaction.type}">Type</td>
+    <td th:text="${transaction.getFormattedType()}">Type</td>
   </tr>
   </tbody>
 </table>

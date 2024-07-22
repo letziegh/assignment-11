@@ -22,7 +22,7 @@
 	<td th:text="${transaction.date}">Date</td>
 	<td th:text="${transaction.retailer}">Retailer</td>
 	<td th:text="${transaction.type=='D'?transaction.amount:''}">FundsIn</td>
-	<td th:text="${transaction.type=='C'?transaction.amount:''}">FundsOut</td>
+	<td th:text="${transaction.type=='C'?-transaction.amount:''}">FundsOut</td>
 	</tr>
 	</tbody>
 </table>
